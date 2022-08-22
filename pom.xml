@@ -409,6 +409,7 @@
       </properties>
       <build>
         <pluginManagement>
+          <!-- 
           <plugins>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -418,8 +419,25 @@
                   <testExclude>**/*IT.java</testExclude>
                 </testExcludes>
               </configuration>
-            </plugin>
-          </plugins>
+            </plugin>		  	   	  
+          </plugins> 
+          -->
+		
+          <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+			<configuration>
+                <testExcludes>
+                  <testExclude>**/*IT.java</testExclude>
+                </testExcludes>
+              </configuration>
+                </plugin>
+            </plugins>
+		  
+	
+		
         </pluginManagement>
       </build>
     </profile>
